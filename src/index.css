@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.card{
+    transform-style: preserve-3d ;
+    transition: all 0.5s ease;
+}
+.card:hover{
+    transform:rotateY(180deg);
+}
+.front{
+    backface-visibility:hidden;
+    
+}
+.back{
+    backface-visibility:hidden;
+    transform:rotateY(180deg);
+}
+
 @layer base{
     html{
         @apply scroll-smooth
@@ -16,9 +32,13 @@
         @apply text-[16px] font-semibold text-white font-primary
     }
     .btn{
-        @apply bg-white/40 hover:bg-white/15 px-32 py-4 text-[18px]
+        @apply bg-white/40 hover:bg-white/15 px-20 sm:px-32 py-4 
     }
     .nav-link {
         @apply after:w-6 after:h-1 after:absolute after:left-0 after:-bottom-2 after:rounded-full after:bg-transparent after:hover:bg-[#b936f5] after:transition-all after:duration-150 relative;
     }
+    .img{
+        @apply cursor-pointer  w-full
+    }
+    
 }

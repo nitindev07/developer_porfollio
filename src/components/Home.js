@@ -3,8 +3,8 @@ import Hero from '../components/Hero'
 
 const Home = () => {
   return (
-    <section className=''>
-       <div className="mx-16  mb-36">
+    <section>
+       <div className="mx-4 sm:mx-16  mb-36">
         <Hero/>
        </div>
     </section>
